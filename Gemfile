@@ -52,7 +52,11 @@ gem 'figaro'
 gem 'devise'
 group :test, :development do
   gem 'faker'
+  gem 'quiet_assets'
+  gem 'binding_of_caller'
 end
+
+gem 'kaminari'
 
 gem 'bootstrap-sass'
 gem 'simple_form'
