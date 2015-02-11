@@ -5,7 +5,9 @@ class UsersController < ApplicationController
   # GET /users.json
   def index
     @current_page = params[:page].to_i || 0
-    @users = User.limit(20).offset(20 * params[:page].to_i)
+    @users = User.limit(20)
+                 .offset(20 * params[:page].to_i)
+                 .order(params.fetch(:sort, :id))
 
   end
 
