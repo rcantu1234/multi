@@ -32,6 +32,7 @@
 
 <br>
 
+<%= link_to('Previous', users_path(page: @current_page - 1)) if @current_page > 0 %>
 <%= link_to 'Next', users_path(page: @current_page + 1) %>
 <%= link_to 'New User', new_user_path %>
 
