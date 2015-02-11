@@ -16,6 +16,7 @@
   <tbody>
     <% @users.each do |user| %>
       <tr>
+        <td><%= user.id %></td>
         <td><%= user.first_name %></td>
         <td><%= user.last_name %></td>
         <td><%= user.age %></td>
@@ -31,4 +32,6 @@
 
 <br>
 
+<%= link_to 'Next', users_path(page: @current_page + 1) %>
 <%= link_to 'New User', new_user_path %>
+
